@@ -17,25 +17,197 @@ public interface ParserListener extends ParseTreeListener {
 	 */
 	void exitProgram(Parser.ProgramContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link Parser#statement}.
+	 * Enter a parse tree produced by the {@code class}
+	 * labeled alternative in {@link Parser#line}.
 	 * @param ctx the parse tree
 	 */
-	void enterStatement(Parser.StatementContext ctx);
+	void enterClass(Parser.ClassContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link Parser#statement}.
+	 * Exit a parse tree produced by the {@code class}
+	 * labeled alternative in {@link Parser#line}.
 	 * @param ctx the parse tree
 	 */
-	void exitStatement(Parser.StatementContext ctx);
+	void exitClass(Parser.ClassContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link Parser#angularDirectiveStatement}.
+	 * Enter a parse tree produced by the {@code statemen}
+	 * labeled alternative in {@link Parser#line}.
 	 * @param ctx the parse tree
 	 */
-	void enterAngularDirectiveStatement(Parser.AngularDirectiveStatementContext ctx);
+	void enterStatemen(Parser.StatemenContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link Parser#angularDirectiveStatement}.
+	 * Exit a parse tree produced by the {@code statemen}
+	 * labeled alternative in {@link Parser#line}.
 	 * @param ctx the parse tree
 	 */
-	void exitAngularDirectiveStatement(Parser.AngularDirectiveStatementContext ctx);
+	void exitStatemen(Parser.StatemenContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code iteration}
+	 * labeled alternative in {@link Parser#statement}.
+	 * @param ctx the parse tree
+	 */
+	void enterIteration(Parser.IterationContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code iteration}
+	 * labeled alternative in {@link Parser#statement}.
+	 * @param ctx the parse tree
+	 */
+	void exitIteration(Parser.IterationContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code declarationStatement}
+	 * labeled alternative in {@link Parser#statement}.
+	 * @param ctx the parse tree
+	 */
+	void enterDeclarationStatement(Parser.DeclarationStatementContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code declarationStatement}
+	 * labeled alternative in {@link Parser#statement}.
+	 * @param ctx the parse tree
+	 */
+	void exitDeclarationStatement(Parser.DeclarationStatementContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code if}
+	 * labeled alternative in {@link Parser#statement}.
+	 * @param ctx the parse tree
+	 */
+	void enterIf(Parser.IfContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code if}
+	 * labeled alternative in {@link Parser#statement}.
+	 * @param ctx the parse tree
+	 */
+	void exitIf(Parser.IfContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code return}
+	 * labeled alternative in {@link Parser#statement}.
+	 * @param ctx the parse tree
+	 */
+	void enterReturn(Parser.ReturnContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code return}
+	 * labeled alternative in {@link Parser#statement}.
+	 * @param ctx the parse tree
+	 */
+	void exitReturn(Parser.ReturnContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code expre}
+	 * labeled alternative in {@link Parser#statement}.
+	 * @param ctx the parse tree
+	 */
+	void enterExpre(Parser.ExpreContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code expre}
+	 * labeled alternative in {@link Parser#statement}.
+	 * @param ctx the parse tree
+	 */
+	void exitExpre(Parser.ExpreContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code expressions}
+	 * labeled alternative in {@link Parser#statement}.
+	 * @param ctx the parse tree
+	 */
+	void enterExpressions(Parser.ExpressionsContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code expressions}
+	 * labeled alternative in {@link Parser#statement}.
+	 * @param ctx the parse tree
+	 */
+	void exitExpressions(Parser.ExpressionsContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code arrayCall}
+	 * labeled alternative in {@link Parser#statement}.
+	 * @param ctx the parse tree
+	 */
+	void enterArrayCall(Parser.ArrayCallContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code arrayCall}
+	 * labeled alternative in {@link Parser#statement}.
+	 * @param ctx the parse tree
+	 */
+	void exitArrayCall(Parser.ArrayCallContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code dowhile}
+	 * labeled alternative in {@link Parser#iterationStatement}.
+	 * @param ctx the parse tree
+	 */
+	void enterDowhile(Parser.DowhileContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code dowhile}
+	 * labeled alternative in {@link Parser#iterationStatement}.
+	 * @param ctx the parse tree
+	 */
+	void exitDowhile(Parser.DowhileContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code forEach}
+	 * labeled alternative in {@link Parser#iterationStatement}.
+	 * @param ctx the parse tree
+	 */
+	void enterForEach(Parser.ForEachContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code forEach}
+	 * labeled alternative in {@link Parser#iterationStatement}.
+	 * @param ctx the parse tree
+	 */
+	void exitForEach(Parser.ForEachContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code for}
+	 * labeled alternative in {@link Parser#iterationStatement}.
+	 * @param ctx the parse tree
+	 */
+	void enterFor(Parser.ForContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code for}
+	 * labeled alternative in {@link Parser#iterationStatement}.
+	 * @param ctx the parse tree
+	 */
+	void exitFor(Parser.ForContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code while}
+	 * labeled alternative in {@link Parser#iterationStatement}.
+	 * @param ctx the parse tree
+	 */
+	void enterWhile(Parser.WhileContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code while}
+	 * labeled alternative in {@link Parser#iterationStatement}.
+	 * @param ctx the parse tree
+	 */
+	void exitWhile(Parser.WhileContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code variable}
+	 * labeled alternative in {@link Parser#declaration}.
+	 * @param ctx the parse tree
+	 */
+	void enterVariable(Parser.VariableContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code variable}
+	 * labeled alternative in {@link Parser#declaration}.
+	 * @param ctx the parse tree
+	 */
+	void exitVariable(Parser.VariableContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code function}
+	 * labeled alternative in {@link Parser#declaration}.
+	 * @param ctx the parse tree
+	 */
+	void enterFunction(Parser.FunctionContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code function}
+	 * labeled alternative in {@link Parser#declaration}.
+	 * @param ctx the parse tree
+	 */
+	void exitFunction(Parser.FunctionContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code array}
+	 * labeled alternative in {@link Parser#declaration}.
+	 * @param ctx the parse tree
+	 */
+	void enterArray(Parser.ArrayContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code array}
+	 * labeled alternative in {@link Parser#declaration}.
+	 * @param ctx the parse tree
+	 */
+	void exitArray(Parser.ArrayContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link Parser#expressionStatement}.
 	 * @param ctx the parse tree
@@ -46,6 +218,26 @@ public interface ParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitExpressionStatement(Parser.ExpressionStatementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link Parser#classDeclaration}.
+	 * @param ctx the parse tree
+	 */
+	void enterClassDeclaration(Parser.ClassDeclarationContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link Parser#classDeclaration}.
+	 * @param ctx the parse tree
+	 */
+	void exitClassDeclaration(Parser.ClassDeclarationContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link Parser#classBody}.
+	 * @param ctx the parse tree
+	 */
+	void enterClassBody(Parser.ClassBodyContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link Parser#classBody}.
+	 * @param ctx the parse tree
+	 */
+	void exitClassBody(Parser.ClassBodyContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link Parser#variableDeclaration}.
 	 * @param ctx the parse tree
@@ -106,6 +298,16 @@ public interface ParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitForEachStatement(Parser.ForEachStatementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link Parser#block}.
+	 * @param ctx the parse tree
+	 */
+	void enterBlock(Parser.BlockContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link Parser#block}.
+	 * @param ctx the parse tree
+	 */
+	void exitBlock(Parser.BlockContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link Parser#initializationExpression}.
 	 * @param ctx the parse tree
@@ -217,40 +419,6 @@ public interface ParserListener extends ParseTreeListener {
 	 */
 	void exitArrayMethodCall(Parser.ArrayMethodCallContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link Parser#classDeclaration}.
-	 * @param ctx the parse tree
-	 */
-	void enterClassDeclaration(Parser.ClassDeclarationContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link Parser#classDeclaration}.
-	 * @param ctx the parse tree
-	 */
-	void exitClassDeclaration(Parser.ClassDeclarationContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code functionDeclaratin}
-	 * labeled alternative in {@link Parser#classBody}.
-	 * @param ctx the parse tree
-	 */
-	void enterFunctionDeclaratin(Parser.FunctionDeclaratinContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code functionDeclaratin}
-	 * labeled alternative in {@link Parser#classBody}.
-	 * @param ctx the parse tree
-	 */
-	void exitFunctionDeclaratin(Parser.FunctionDeclaratinContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code variableDeclartion}
-	 * labeled alternative in {@link Parser#classBody}.
-	 * @param ctx the parse tree
-	 */
-	void enterVariableDeclartion(Parser.VariableDeclartionContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code variableDeclartion}
-	 * labeled alternative in {@link Parser#classBody}.
-	 * @param ctx the parse tree
-	 */
-	void exitVariableDeclartion(Parser.VariableDeclartionContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link Parser#htmlContent}.
 	 * @param ctx the parse tree
 	 */
@@ -280,6 +448,16 @@ public interface ParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitHtmlElement(Parser.HtmlElementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link Parser#angularDirectiveStatement}.
+	 * @param ctx the parse tree
+	 */
+	void enterAngularDirectiveStatement(Parser.AngularDirectiveStatementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link Parser#angularDirectiveStatement}.
+	 * @param ctx the parse tree
+	 */
+	void exitAngularDirectiveStatement(Parser.AngularDirectiveStatementContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link Parser#htmlComment}.
 	 * @param ctx the parse tree

@@ -16,23 +16,135 @@ public interface ParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitProgram(Parser.ProgramContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link Parser#statement}.
+	 * Visit a parse tree produced by the {@code class}
+	 * labeled alternative in {@link Parser#line}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitStatement(Parser.StatementContext ctx);
+	T visitClass(Parser.ClassContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link Parser#angularDirectiveStatement}.
+	 * Visit a parse tree produced by the {@code statemen}
+	 * labeled alternative in {@link Parser#line}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitAngularDirectiveStatement(Parser.AngularDirectiveStatementContext ctx);
+	T visitStatemen(Parser.StatemenContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code iteration}
+	 * labeled alternative in {@link Parser#statement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitIteration(Parser.IterationContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code declarationStatement}
+	 * labeled alternative in {@link Parser#statement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitDeclarationStatement(Parser.DeclarationStatementContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code if}
+	 * labeled alternative in {@link Parser#statement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitIf(Parser.IfContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code return}
+	 * labeled alternative in {@link Parser#statement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitReturn(Parser.ReturnContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code expre}
+	 * labeled alternative in {@link Parser#statement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExpre(Parser.ExpreContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code expressions}
+	 * labeled alternative in {@link Parser#statement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExpressions(Parser.ExpressionsContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code arrayCall}
+	 * labeled alternative in {@link Parser#statement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitArrayCall(Parser.ArrayCallContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code dowhile}
+	 * labeled alternative in {@link Parser#iterationStatement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitDowhile(Parser.DowhileContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code forEach}
+	 * labeled alternative in {@link Parser#iterationStatement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitForEach(Parser.ForEachContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code for}
+	 * labeled alternative in {@link Parser#iterationStatement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFor(Parser.ForContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code while}
+	 * labeled alternative in {@link Parser#iterationStatement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitWhile(Parser.WhileContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code variable}
+	 * labeled alternative in {@link Parser#declaration}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitVariable(Parser.VariableContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code function}
+	 * labeled alternative in {@link Parser#declaration}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFunction(Parser.FunctionContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code array}
+	 * labeled alternative in {@link Parser#declaration}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitArray(Parser.ArrayContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link Parser#expressionStatement}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitExpressionStatement(Parser.ExpressionStatementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link Parser#classDeclaration}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitClassDeclaration(Parser.ClassDeclarationContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link Parser#classBody}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitClassBody(Parser.ClassBodyContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link Parser#variableDeclaration}.
 	 * @param ctx the parse tree
@@ -69,6 +181,12 @@ public interface ParserVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitForEachStatement(Parser.ForEachStatementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link Parser#block}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitBlock(Parser.BlockContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link Parser#initializationExpression}.
 	 * @param ctx the parse tree
@@ -136,26 +254,6 @@ public interface ParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitArrayMethodCall(Parser.ArrayMethodCallContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link Parser#classDeclaration}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitClassDeclaration(Parser.ClassDeclarationContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code functionDeclaratin}
-	 * labeled alternative in {@link Parser#classBody}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitFunctionDeclaratin(Parser.FunctionDeclaratinContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code variableDeclartion}
-	 * labeled alternative in {@link Parser#classBody}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitVariableDeclartion(Parser.VariableDeclartionContext ctx);
-	/**
 	 * Visit a parse tree produced by {@link Parser#htmlContent}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -173,6 +271,12 @@ public interface ParserVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitHtmlElement(Parser.HtmlElementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link Parser#angularDirectiveStatement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAngularDirectiveStatement(Parser.AngularDirectiveStatementContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link Parser#htmlComment}.
 	 * @param ctx the parse tree

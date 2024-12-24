@@ -6,27 +6,41 @@ options {
   tokenVocab=Lexer;
 }
 
-program : statement+;
+program : line+;
 
-statement
-  :
+line :
+      importStatement         #importState
+    | classDeclaration        #class
+    | statement               #statemen
+;
 
-      classDeclaration
-  | doWhileStatement
-  | forEachStatement
-  | variableDeclaration
-  | functionDeclaration
-  | ifStatement
-  | forStatement
-  | whileStatement
-  | returnStatement
-  | expressionStatement
-  | arrayDeclaration
-  | arrayMethodCall
+statement:
+    iterationStatement      #iteration
+  | declaration             #declarationStatement
+  | ifStatement             #if
+  | returnStatement         #return
+  | expression              #expre
+  | expressionStatement     #expressions
+  | arrayMethodCall         #arrayCall
+;
+
+iterationStatement :
+      doWhileStatement        #dowhile
+    | forEachStatement        #forEach
+    | forStatement            #for
+    | whileStatement          #while
+
+;
+
+declaration :
+    variableDeclaration     #variable
+  | functionDeclaration     #function
+  | arrayDeclaration        #array
 ;
 
 expressionStatement
-   : (IDENTIFIER EQUAL expression
+   :
+       (IDENTIFIER EQUAL expression
      | IDENTIFIER PLUS EQUAL expression
      | IDENTIFIER MINUS EQUAL expression
      | IDENTIFIER MUL_ASSIGN expression
@@ -38,40 +52,52 @@ expressionStatement
      | IDENTIFIER (DOT IDENTIFIER)*  // member accesses
      | NUMBER
      | STRING
-     | BOOLEAN
-     ) SEMICOLON?
+     | BOOLEAN)
+     SEMICOLON
+
    ;
 
+classDeclaration :
+       EXPORT? CLASS IDENTIFIER LBRACE classBody RBRACE ;
+
+    classBody :
+        (functionDeclaration | variableDeclaration)* ;
 
 
 // TypeScript
 variableDeclaration
- : (VAR | LET | CONST) IDENTIFIER (COLON TYPE)? EQUAL expression SEMICOLON
+ : EXPORT? VARIABLE_TYPE IDENTIFIER (COLON TYPE)? EQUAL expression SEMICOLON
   ;
 
 
 
 functionDeclaration
-  : FUNCTION IDENTIFIER LPAREN parameters RPAREN COLON TYPE LBRACE statement+ RBRACE
+  : FUNCTION IDENTIFIER LPAREN parameters RPAREN COLON TYPE block
   ;
   parameters
-    : (IDENTIFIER COLON TYPE (COMMA IDENTIFIER COLON TYPE)*)?
+    : (IDENTIFIER COLON TYPE (COMMA IDENTIFIER COLON TYPE)* COMMA?)?
     ;
 
   ifStatement
-    : IF LPAREN expression RPAREN LBRACE statement* RBRACE
-      (ELSE IF LPAREN expression RPAREN LBRACE statement* RBRACE)*  // for multiple "else if" cases
-      (ELSE LBRACE statement* RBRACE)?
+    : IF LPAREN expression RPAREN block
+      (ELSE IF LPAREN expression RPAREN block)*  // for multiple "else if" cases
+      (ELSE block)?
     ;
 
   forStatement
-    : FOR LPAREN initializationExpression SEMICOLON conditionExpression SEMICOLON iterationExpression RPAREN LBRACE statement+ RBRACE
+    : FOR LPAREN initializationExpression SEMICOLON conditionExpression SEMICOLON iterationExpression RPAREN block
     ;
 
   forEachStatement
-    : IDENTIFIER DOT FOREACH LPAREN LPAREN IDENTIFIER RPAREN ARROW LBRACE statement+ RBRACE RPAREN
+    : IDENTIFIER DOT FOREACH LPAREN LPAREN IDENTIFIER RPAREN ARROW block RPAREN
     ;
 
+
+block :
+    LBRACE statement* RBRACE
+;
+
+importStatement : IMPORT ( LBRACE IDENTIFIER (COMMA IDENTIFIER)* COMMA? RBRACE | '*') FROM  IDENTIFIER SEMICOLON;
 
   initializationExpression
     : VARIABLE_TYPE IDENTIFIER EQUAL expression
@@ -87,11 +113,11 @@ functionDeclaration
     ;
 
   whileStatement
-    : WHILE LPAREN strictEqualityExpression RPAREN LBRACE statement+ RBRACE
+    : WHILE LPAREN strictEqualityExpression RPAREN block
     ;
 
   doWhileStatement
-    : DO LBRACE statement+ RBRACE WHILE LPAREN strictEqualityExpression RPAREN SEMICOLON
+    : DO block WHILE LPAREN strictEqualityExpression RPAREN SEMICOLON
     ;
 
 
@@ -111,28 +137,12 @@ functionDeclaration
     ;
 
     expression
-      : IDENTIFIER (DOT IDENTIFIER)*   // member accesses
-      | IDENTIFIER LBRACKET expression RBRACKET  // array access
-      | IDENTIFIER LPAREN (expression (COMMA expression)*)? RPAREN  // function calls like console.log()
-      | IDENTIFIER INCREMENT           // j++
-      | IDENTIFIER DECREMENT           // j--
-      | IDENTIFIER MUL_ASSIGN expression  // *=
-      | IDENTIFIER DIV_ASSIGN expression  // /=
-      | IDENTIFIER MOD_ASSIGN expression  // %=
-      | IDENTIFIER EQUAL expression  // =
-      | IDENTIFIER PLUS EQUAL expression  // +=
-      | IDENTIFIER MINUS EQUAL expression  // -=
-      | IDENTIFIER MUL_ASSIGN expression  // *=
-      | IDENTIFIER DIV_ASSIGN expression  // /=
-      | IDENTIFIER MOD_ASSIGN expression  // %=
-      | IDENTIFIER PLUS expression     // Allowed for simple addition
-      | IDENTIFIER MINUS expression    // Allowed for simple subtraction
-      | IDENTIFIER EQUAL_EQUAL expression   // Strict equality check (==)
-      | NUMBER
-      | STRING
-      | BOOLEAN
-      | expression TIMES expression
+      :
+        expression TIMES expression
       | expression DIVIDE expression
+      | IDENTIFIER MUL_ASSIGN expression  // *=
+      | IDENTIFIER DIV_ASSIGN expression  // /=
+      | IDENTIFIER  LPAREN (expression (COMMA expression)*)? RPAREN  // function calls like console.log()
       | expression AND expression       // AND (&&)
       | expression OR expression
       | expression PLUS expression
@@ -142,6 +152,23 @@ functionDeclaration
       | expression GREATER_EQUAL expression
       | expression LESS expression
       | expression LESS_EQUAL expression
+      | IDENTIFIER INCREMENT           // j++
+      | IDENTIFIER DECREMENT           // j--
+      | IDENTIFIER MUL_ASSIGN expression  // *=
+      | IDENTIFIER MOD_ASSIGN expression  // %=
+      | IDENTIFIER EQUAL expression  // =
+      | IDENTIFIER PLUS EQUAL expression  // +=
+      | IDENTIFIER MINUS EQUAL expression  // -=
+      | IDENTIFIER DIV_ASSIGN expression  // /=
+      | IDENTIFIER MOD_ASSIGN expression  // %=
+      | IDENTIFIER PLUS expression     // Allowed for simple addition
+      | IDENTIFIER MINUS expression    // Allowed for simple subtraction
+      | IDENTIFIER EQUAL_EQUAL expression   // Strict equality check (==)
+      | IDENTIFIER (DOT IDENTIFIER)*   // member accesses
+      | IDENTIFIER LBRACKET expression RBRACKET  // array access
+      | NUMBER
+      | STRING
+      | BOOLEAN
       ;
 
     arrayDeclaration
@@ -153,14 +180,7 @@ functionDeclaration
       ;
 
     arrayMethodCall
-      : IDENTIFIER DOT FOREACH LPAREN LPAREN IDENTIFIER RPAREN ARROW LBRACE statement+ RBRACE RPAREN SEMICOLON
+      : IDENTIFIER DOT FOREACH LPAREN LPAREN IDENTIFIER RPAREN ARROW block RPAREN SEMICOLON
       ;
-
-
-  classDeclaration : CLASS IDENTIFIER LBRACE classBody* RBRACE ;
-  classBody :
-  functionDeclaration #functionDeclaratin
-  | variableDeclaration #variableDeclartion
-  ;
 
 
