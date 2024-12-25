@@ -1,13 +1,14 @@
 package Ast;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class Program {
     private List<Line> lines;
 
-    public Program(List<Line> lines) {
-        this.lines = lines;
+    public Program() {
+        lines = new ArrayList<>();
     }
 
     // Getter and Setter

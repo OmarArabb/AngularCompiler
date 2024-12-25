@@ -1,6 +1,6 @@
 package Ast;
 
-public class IterationStatement extends Statement {
+public abstract class IterationStatement extends Statement {
     // Add relevant fields and methods
 
     @Override
