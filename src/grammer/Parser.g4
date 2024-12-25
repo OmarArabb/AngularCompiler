@@ -14,6 +14,7 @@ line :
     | statement               #statemen
 ;
 
+
 statement:
     iterationStatement      #iteration
   | declaration             #declarationStatement
@@ -38,6 +39,7 @@ declaration :
   | arrayDeclaration        #array
 ;
 
+
 expressionStatement
    :
        (IDENTIFIER EQUAL expression
@@ -57,12 +59,9 @@ expressionStatement
 
    ;
 
+
 classDeclaration :
-       EXPORT? CLASS IDENTIFIER LBRACE classBody RBRACE ;
-
-    classBody :
-        (functionDeclaration | variableDeclaration)* ;
-
+       EXPORT? CLASS IDENTIFIER LBRACE declaration* RBRACE ;
 
 // TypeScript
 variableDeclaration
@@ -85,7 +84,7 @@ functionDeclaration
     ;
 
   forStatement
-    : FOR LPAREN initializationExpression SEMICOLON conditionExpression SEMICOLON iterationExpression RPAREN block
+    : FOR LPAREN initializationExpression SEMICOLON expression SEMICOLON iterationExpression RPAREN block
     ;
 
   forEachStatement
@@ -102,10 +101,6 @@ importStatement : IMPORT ( LBRACE IDENTIFIER (COMMA IDENTIFIER)* COMMA? RBRACE |
   initializationExpression
     : VARIABLE_TYPE IDENTIFIER EQUAL expression
     | IDENTIFIER EQUAL expression
-    ;
-
-  conditionExpression
-    : expression
     ;
 
   iterationExpression
@@ -182,5 +177,3 @@ importStatement : IMPORT ( LBRACE IDENTIFIER (COMMA IDENTIFIER)* COMMA? RBRACE |
     arrayMethodCall
       : IDENTIFIER DOT FOREACH LPAREN LPAREN IDENTIFIER RPAREN ARROW block RPAREN SEMICOLON
       ;
-
-

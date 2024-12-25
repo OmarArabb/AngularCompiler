@@ -17,6 +17,18 @@ public interface ParserListener extends ParseTreeListener {
 	 */
 	void exitProgram(Parser.ProgramContext ctx);
 	/**
+	 * Enter a parse tree produced by the {@code importState}
+	 * labeled alternative in {@link Parser#line}.
+	 * @param ctx the parse tree
+	 */
+	void enterImportState(Parser.ImportStateContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code importState}
+	 * labeled alternative in {@link Parser#line}.
+	 * @param ctx the parse tree
+	 */
+	void exitImportState(Parser.ImportStateContext ctx);
+	/**
 	 * Enter a parse tree produced by the {@code class}
 	 * labeled alternative in {@link Parser#line}.
 	 * @param ctx the parse tree
@@ -229,16 +241,6 @@ public interface ParserListener extends ParseTreeListener {
 	 */
 	void exitClassDeclaration(Parser.ClassDeclarationContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link Parser#classBody}.
-	 * @param ctx the parse tree
-	 */
-	void enterClassBody(Parser.ClassBodyContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link Parser#classBody}.
-	 * @param ctx the parse tree
-	 */
-	void exitClassBody(Parser.ClassBodyContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link Parser#variableDeclaration}.
 	 * @param ctx the parse tree
 	 */
@@ -309,6 +311,16 @@ public interface ParserListener extends ParseTreeListener {
 	 */
 	void exitBlock(Parser.BlockContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link Parser#importStatement}.
+	 * @param ctx the parse tree
+	 */
+	void enterImportStatement(Parser.ImportStatementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link Parser#importStatement}.
+	 * @param ctx the parse tree
+	 */
+	void exitImportStatement(Parser.ImportStatementContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link Parser#initializationExpression}.
 	 * @param ctx the parse tree
 	 */
@@ -318,16 +330,6 @@ public interface ParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitInitializationExpression(Parser.InitializationExpressionContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link Parser#conditionExpression}.
-	 * @param ctx the parse tree
-	 */
-	void enterConditionExpression(Parser.ConditionExpressionContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link Parser#conditionExpression}.
-	 * @param ctx the parse tree
-	 */
-	void exitConditionExpression(Parser.ConditionExpressionContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link Parser#iterationExpression}.
 	 * @param ctx the parse tree

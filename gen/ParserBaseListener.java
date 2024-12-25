@@ -28,6 +28,18 @@ public class ParserBaseListener implements ParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterImportState(Parser.ImportStateContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitImportState(Parser.ImportStateContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterClass(Parser.ClassContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -244,18 +256,6 @@ public class ParserBaseListener implements ParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterClassBody(Parser.ClassBodyContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitClassBody(Parser.ClassBodyContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterVariableDeclaration(Parser.VariableDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -340,6 +340,18 @@ public class ParserBaseListener implements ParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterImportStatement(Parser.ImportStatementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitImportStatement(Parser.ImportStatementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterInitializationExpression(Parser.InitializationExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -347,18 +359,6 @@ public class ParserBaseListener implements ParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitInitializationExpression(Parser.InitializationExpressionContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterConditionExpression(Parser.ConditionExpressionContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitConditionExpression(Parser.ConditionExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

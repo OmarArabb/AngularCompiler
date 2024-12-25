@@ -151,7 +151,7 @@ public class HtmlLexer extends Lexer {
 	}
 
 	@Override
-	public String getGrammarFileName() { return "HtmlLexer.g4"; }
+	public String getGrammarFileName() { return "grammer/HtmlLexer.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }

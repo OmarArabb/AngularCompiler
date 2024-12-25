@@ -149,7 +149,7 @@ public class HtmlParser extends Parser {
 	}
 
 	@Override
-	public String getGrammarFileName() { return "HtmlParser.g4"; }
+	public String getGrammarFileName() { return "grammer/HtmlParser.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }

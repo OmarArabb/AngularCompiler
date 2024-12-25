@@ -12,8 +12,7 @@ RETURN: 'return';
 FOREACH: 'forEach';
 ARROW: '=>';
 TYPE: 'number' | 'string' | 'boolean' | 'void' | 'any';
-//CONSOLE: 'console';
-//LOG: 'log';
+
 
 
 VARIABLE_TYPE : 'var' | 'let' | 'const';
@@ -61,4 +60,4 @@ WHITESPACE: [ \t\r\n]+ -> skip; COMMENT: '//' ~[ \r\n]* -> skip; BLOCK_COMMENT: 
 
 CLASS: 'class' [ \t\r\n]*;
 LBRACE: '{' [ \t\r\n]*;
-RBRACE: '}' ;
+RBRACE: '}' [ \t\r\n]*;

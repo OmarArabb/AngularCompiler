@@ -16,6 +16,13 @@ public interface ParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitProgram(Parser.ProgramContext ctx);
 	/**
+	 * Visit a parse tree produced by the {@code importState}
+	 * labeled alternative in {@link Parser#line}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitImportState(Parser.ImportStateContext ctx);
+	/**
 	 * Visit a parse tree produced by the {@code class}
 	 * labeled alternative in {@link Parser#line}.
 	 * @param ctx the parse tree
@@ -140,12 +147,6 @@ public interface ParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitClassDeclaration(Parser.ClassDeclarationContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link Parser#classBody}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitClassBody(Parser.ClassBodyContext ctx);
-	/**
 	 * Visit a parse tree produced by {@link Parser#variableDeclaration}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -188,17 +189,17 @@ public interface ParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitBlock(Parser.BlockContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link Parser#importStatement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitImportStatement(Parser.ImportStatementContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link Parser#initializationExpression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitInitializationExpression(Parser.InitializationExpressionContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link Parser#conditionExpression}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitConditionExpression(Parser.ConditionExpressionContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link Parser#iterationExpression}.
 	 * @param ctx the parse tree
