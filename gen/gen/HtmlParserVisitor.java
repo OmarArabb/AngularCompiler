@@ -1,4 +1,5 @@
-// Generated from C:/Users/Omar Arab/IdeaProjects/compilertest/src/HtmlParser.g4 by ANTLR 4.13.2
+// Generated from C:/Users/n_alb/IdeaProjects/AngularCompiler/src/grammer/HtmlParser.g4 by ANTLR 4.13.2
+package gen;
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
@@ -238,40 +239,40 @@ public interface HtmlParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitProgram(HtmlParser.ProgramContext ctx);
 	/**
+	 * Visit a parse tree produced by the {@code importState}
+	 * labeled alternative in {@link HtmlParser#line}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitImportState(HtmlParser.ImportStateContext ctx);
+	/**
 	 * Visit a parse tree produced by the {@code class}
-	 * labeled alternative in {@link HtmlParser#statement}.
+	 * labeled alternative in {@link HtmlParser#line}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitClass(HtmlParser.ClassContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code dowhile}
-	 * labeled alternative in {@link HtmlParser#statement}.
+	 * Visit a parse tree produced by the {@code statemen}
+	 * labeled alternative in {@link HtmlParser#line}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitDowhile(HtmlParser.DowhileContext ctx);
+	T visitStatemen(HtmlParser.StatemenContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code for}
+	 * Visit a parse tree produced by the {@code iteration}
 	 * labeled alternative in {@link HtmlParser#statement}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitFor(HtmlParser.ForContext ctx);
+	T visitIteration(HtmlParser.IterationContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code variable}
+	 * Visit a parse tree produced by the {@code declarationStatement}
 	 * labeled alternative in {@link HtmlParser#statement}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitVariable(HtmlParser.VariableContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code function}
-	 * labeled alternative in {@link HtmlParser#statement}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitFunction(HtmlParser.FunctionContext ctx);
+	T visitDeclarationStatement(HtmlParser.DeclarationStatementContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code if}
 	 * labeled alternative in {@link HtmlParser#statement}.
@@ -280,13 +281,6 @@ public interface HtmlParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitIf(HtmlParser.IfContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code while}
-	 * labeled alternative in {@link HtmlParser#statement}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitWhile(HtmlParser.WhileContext ctx);
-	/**
 	 * Visit a parse tree produced by the {@code return}
 	 * labeled alternative in {@link HtmlParser#statement}.
 	 * @param ctx the parse tree
@@ -294,12 +288,19 @@ public interface HtmlParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitReturn(HtmlParser.ReturnContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code array}
+	 * Visit a parse tree produced by the {@code expre}
 	 * labeled alternative in {@link HtmlParser#statement}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitArray(HtmlParser.ArrayContext ctx);
+	T visitExpre(HtmlParser.ExpreContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code expressions}
+	 * labeled alternative in {@link HtmlParser#statement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExpressions(HtmlParser.ExpressionsContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code arrayCall}
 	 * labeled alternative in {@link HtmlParser#statement}.
@@ -308,11 +309,66 @@ public interface HtmlParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitArrayCall(HtmlParser.ArrayCallContext ctx);
 	/**
+	 * Visit a parse tree produced by the {@code dowhile}
+	 * labeled alternative in {@link HtmlParser#iterationStatement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitDowhile(HtmlParser.DowhileContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code forEach}
+	 * labeled alternative in {@link HtmlParser#iterationStatement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitForEach(HtmlParser.ForEachContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code for}
+	 * labeled alternative in {@link HtmlParser#iterationStatement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFor(HtmlParser.ForContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code while}
+	 * labeled alternative in {@link HtmlParser#iterationStatement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitWhile(HtmlParser.WhileContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code variable}
+	 * labeled alternative in {@link HtmlParser#declaration}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitVariable(HtmlParser.VariableContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code function}
+	 * labeled alternative in {@link HtmlParser#declaration}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFunction(HtmlParser.FunctionContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code array}
+	 * labeled alternative in {@link HtmlParser#declaration}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitArray(HtmlParser.ArrayContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link HtmlParser#expressionStatement}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitExpressionStatement(HtmlParser.ExpressionStatementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link HtmlParser#classDeclaration}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitClassDeclaration(HtmlParser.ClassDeclarationContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link HtmlParser#variableDeclaration}.
 	 * @param ctx the parse tree
@@ -350,17 +406,23 @@ public interface HtmlParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitForEachStatement(HtmlParser.ForEachStatementContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link HtmlParser#block}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitBlock(HtmlParser.BlockContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link HtmlParser#importStatement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitImportStatement(HtmlParser.ImportStatementContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link HtmlParser#initializationExpression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitInitializationExpression(HtmlParser.InitializationExpressionContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link HtmlParser#conditionExpression}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitConditionExpression(HtmlParser.ConditionExpressionContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link HtmlParser#iterationExpression}.
 	 * @param ctx the parse tree
@@ -415,24 +477,4 @@ public interface HtmlParserVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitArrayMethodCall(HtmlParser.ArrayMethodCallContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link HtmlParser#classDeclaration}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitClassDeclaration(HtmlParser.ClassDeclarationContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code functionDeclaratin}
-	 * labeled alternative in {@link HtmlParser#classBody}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitFunctionDeclaratin(HtmlParser.FunctionDeclaratinContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code variableDeclartion}
-	 * labeled alternative in {@link HtmlParser#classBody}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitVariableDeclartion(HtmlParser.VariableDeclartionContext ctx);
 }

@@ -1,916 +1,917 @@
-// Generated from C:/Users/Omar Arab/IdeaProjects/compilertest/src/Parser.g4 by ANTLR 4.13.2
+// Generated from C:/Users/n_alb/IdeaProjects/AngularCompiler/src/grammer/HtmlParser.g4 by ANTLR 4.13.2
+package gen;
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
 /**
- * This class provides an empty implementation of {@link ParserListener},
+ * This class provides an empty implementation of {@link HtmlParserListener},
  * which can be extended to create a listener which only needs to handle a subset
  * of the available methods.
  */
 @SuppressWarnings("CheckReturnValue")
-public class ParserBaseListener implements ParserListener {
+public class HtmlParserBaseListener implements HtmlParserListener {
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterProgram(Parser.ProgramContext ctx) { }
+	@Override public void enterHtmlContent(HtmlParser.HtmlContentContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitProgram(Parser.ProgramContext ctx) { }
+	@Override public void exitHtmlContent(HtmlParser.HtmlContentContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterImportState(Parser.ImportStateContext ctx) { }
+	@Override public void enterDoctypeDeclaration(HtmlParser.DoctypeDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitImportState(Parser.ImportStateContext ctx) { }
+	@Override public void exitDoctypeDeclaration(HtmlParser.DoctypeDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterClass(Parser.ClassContext ctx) { }
+	@Override public void enterHtmlElement(HtmlParser.HtmlElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitClass(Parser.ClassContext ctx) { }
+	@Override public void exitHtmlElement(HtmlParser.HtmlElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterStatemen(Parser.StatemenContext ctx) { }
+	@Override public void enterAngularDirectiveStatement(HtmlParser.AngularDirectiveStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitStatemen(Parser.StatemenContext ctx) { }
+	@Override public void exitAngularDirectiveStatement(HtmlParser.AngularDirectiveStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterIteration(Parser.IterationContext ctx) { }
+	@Override public void enterHtmlComment(HtmlParser.HtmlCommentContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitIteration(Parser.IterationContext ctx) { }
+	@Override public void exitHtmlComment(HtmlParser.HtmlCommentContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDeclarationStatement(Parser.DeclarationStatementContext ctx) { }
+	@Override public void enterFormElement(HtmlParser.FormElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDeclarationStatement(Parser.DeclarationStatementContext ctx) { }
+	@Override public void exitFormElement(HtmlParser.FormElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterIf(Parser.IfContext ctx) { }
+	@Override public void enterFormContent(HtmlParser.FormContentContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitIf(Parser.IfContext ctx) { }
+	@Override public void exitFormContent(HtmlParser.FormContentContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterReturn(Parser.ReturnContext ctx) { }
+	@Override public void enterInputElement(HtmlParser.InputElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitReturn(Parser.ReturnContext ctx) { }
+	@Override public void exitInputElement(HtmlParser.InputElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExpre(Parser.ExpreContext ctx) { }
+	@Override public void enterTextareaElement(HtmlParser.TextareaElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExpre(Parser.ExpreContext ctx) { }
+	@Override public void exitTextareaElement(HtmlParser.TextareaElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExpressions(Parser.ExpressionsContext ctx) { }
+	@Override public void enterButtonElement(HtmlParser.ButtonElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExpressions(Parser.ExpressionsContext ctx) { }
+	@Override public void exitButtonElement(HtmlParser.ButtonElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterArrayCall(Parser.ArrayCallContext ctx) { }
+	@Override public void enterTableElement(HtmlParser.TableElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitArrayCall(Parser.ArrayCallContext ctx) { }
+	@Override public void exitTableElement(HtmlParser.TableElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDowhile(Parser.DowhileContext ctx) { }
+	@Override public void enterTableRow(HtmlParser.TableRowContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDowhile(Parser.DowhileContext ctx) { }
+	@Override public void exitTableRow(HtmlParser.TableRowContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterForEach(Parser.ForEachContext ctx) { }
+	@Override public void enterTableHeader(HtmlParser.TableHeaderContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitForEach(Parser.ForEachContext ctx) { }
+	@Override public void exitTableHeader(HtmlParser.TableHeaderContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFor(Parser.ForContext ctx) { }
+	@Override public void enterTableCell(HtmlParser.TableCellContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFor(Parser.ForContext ctx) { }
+	@Override public void exitTableCell(HtmlParser.TableCellContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterWhile(Parser.WhileContext ctx) { }
+	@Override public void enterListitem(HtmlParser.ListitemContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitWhile(Parser.WhileContext ctx) { }
+	@Override public void exitListitem(HtmlParser.ListitemContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterVariable(Parser.VariableContext ctx) { }
+	@Override public void enterUnorderedList(HtmlParser.UnorderedListContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitVariable(Parser.VariableContext ctx) { }
+	@Override public void exitUnorderedList(HtmlParser.UnorderedListContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFunction(Parser.FunctionContext ctx) { }
+	@Override public void enterOrderedList(HtmlParser.OrderedListContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFunction(Parser.FunctionContext ctx) { }
+	@Override public void exitOrderedList(HtmlParser.OrderedListContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterArray(Parser.ArrayContext ctx) { }
+	@Override public void enterAnchorTag(HtmlParser.AnchorTagContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitArray(Parser.ArrayContext ctx) { }
+	@Override public void exitAnchorTag(HtmlParser.AnchorTagContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExpressionStatement(Parser.ExpressionStatementContext ctx) { }
+	@Override public void enterImgTag(HtmlParser.ImgTagContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExpressionStatement(Parser.ExpressionStatementContext ctx) { }
+	@Override public void exitImgTag(HtmlParser.ImgTagContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterClassDeclaration(Parser.ClassDeclarationContext ctx) { }
+	@Override public void enterHeadContent(HtmlParser.HeadContentContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitClassDeclaration(Parser.ClassDeclarationContext ctx) { }
+	@Override public void exitHeadContent(HtmlParser.HeadContentContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterVariableDeclaration(Parser.VariableDeclarationContext ctx) { }
+	@Override public void enterHeadElement(HtmlParser.HeadElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitVariableDeclaration(Parser.VariableDeclarationContext ctx) { }
+	@Override public void exitHeadElement(HtmlParser.HeadElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFunctionDeclaration(Parser.FunctionDeclarationContext ctx) { }
+	@Override public void enterTitleTag(HtmlParser.TitleTagContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFunctionDeclaration(Parser.FunctionDeclarationContext ctx) { }
+	@Override public void exitTitleTag(HtmlParser.TitleTagContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterParameters(Parser.ParametersContext ctx) { }
+	@Override public void enterBodyContent(HtmlParser.BodyContentContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitParameters(Parser.ParametersContext ctx) { }
+	@Override public void exitBodyContent(HtmlParser.BodyContentContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterIfStatement(Parser.IfStatementContext ctx) { }
+	@Override public void enterBodyElement(HtmlParser.BodyElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitIfStatement(Parser.IfStatementContext ctx) { }
+	@Override public void exitBodyElement(HtmlParser.BodyElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterForStatement(Parser.ForStatementContext ctx) { }
+	@Override public void enterBoldTextElement(HtmlParser.BoldTextElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitForStatement(Parser.ForStatementContext ctx) { }
+	@Override public void exitBoldTextElement(HtmlParser.BoldTextElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterForEachStatement(Parser.ForEachStatementContext ctx) { }
+	@Override public void enterItalicTextElement(HtmlParser.ItalicTextElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitForEachStatement(Parser.ForEachStatementContext ctx) { }
+	@Override public void exitItalicTextElement(HtmlParser.ItalicTextElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterBlock(Parser.BlockContext ctx) { }
+	@Override public void enterUnderlineTextElement(HtmlParser.UnderlineTextElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitBlock(Parser.BlockContext ctx) { }
+	@Override public void exitUnderlineTextElement(HtmlParser.UnderlineTextElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterImportStatement(Parser.ImportStatementContext ctx) { }
+	@Override public void enterBreakLineElement(HtmlParser.BreakLineElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitImportStatement(Parser.ImportStatementContext ctx) { }
+	@Override public void exitBreakLineElement(HtmlParser.BreakLineElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterInitializationExpression(Parser.InitializationExpressionContext ctx) { }
+	@Override public void enterSpanElement(HtmlParser.SpanElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitInitializationExpression(Parser.InitializationExpressionContext ctx) { }
+	@Override public void exitSpanElement(HtmlParser.SpanElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterIterationExpression(Parser.IterationExpressionContext ctx) { }
+	@Override public void enterTextContent(HtmlParser.TextContentContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitIterationExpression(Parser.IterationExpressionContext ctx) { }
+	@Override public void exitTextContent(HtmlParser.TextContentContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterWhileStatement(Parser.WhileStatementContext ctx) { }
+	@Override public void enterH1Element(HtmlParser.H1ElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitWhileStatement(Parser.WhileStatementContext ctx) { }
+	@Override public void exitH1Element(HtmlParser.H1ElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDoWhileStatement(Parser.DoWhileStatementContext ctx) { }
+	@Override public void enterH2Element(HtmlParser.H2ElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDoWhileStatement(Parser.DoWhileStatementContext ctx) { }
+	@Override public void exitH2Element(HtmlParser.H2ElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterStrictEqualityExpression(Parser.StrictEqualityExpressionContext ctx) { }
+	@Override public void enterH3Element(HtmlParser.H3ElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitStrictEqualityExpression(Parser.StrictEqualityExpressionContext ctx) { }
+	@Override public void exitH3Element(HtmlParser.H3ElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterReturnStatement(Parser.ReturnStatementContext ctx) { }
+	@Override public void enterH4Element(HtmlParser.H4ElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitReturnStatement(Parser.ReturnStatementContext ctx) { }
+	@Override public void exitH4Element(HtmlParser.H4ElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExpression(Parser.ExpressionContext ctx) { }
+	@Override public void enterH5Element(HtmlParser.H5ElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExpression(Parser.ExpressionContext ctx) { }
+	@Override public void exitH5Element(HtmlParser.H5ElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterArrayDeclaration(Parser.ArrayDeclarationContext ctx) { }
+	@Override public void enterH6Element(HtmlParser.H6ElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitArrayDeclaration(Parser.ArrayDeclarationContext ctx) { }
+	@Override public void exitH6Element(HtmlParser.H6ElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterArrayElements(Parser.ArrayElementsContext ctx) { }
+	@Override public void enterPElement(HtmlParser.PElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitArrayElements(Parser.ArrayElementsContext ctx) { }
+	@Override public void exitPElement(HtmlParser.PElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterArrayMethodCall(Parser.ArrayMethodCallContext ctx) { }
+	@Override public void enterProgram(HtmlParser.ProgramContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitArrayMethodCall(Parser.ArrayMethodCallContext ctx) { }
+	@Override public void exitProgram(HtmlParser.ProgramContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterHtmlContent(Parser.HtmlContentContext ctx) { }
+	@Override public void enterImportState(HtmlParser.ImportStateContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitHtmlContent(Parser.HtmlContentContext ctx) { }
+	@Override public void exitImportState(HtmlParser.ImportStateContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDoctypeDeclaration(Parser.DoctypeDeclarationContext ctx) { }
+	@Override public void enterClass(HtmlParser.ClassContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDoctypeDeclaration(Parser.DoctypeDeclarationContext ctx) { }
+	@Override public void exitClass(HtmlParser.ClassContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterHtmlElement(Parser.HtmlElementContext ctx) { }
+	@Override public void enterStatemen(HtmlParser.StatemenContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitHtmlElement(Parser.HtmlElementContext ctx) { }
+	@Override public void exitStatemen(HtmlParser.StatemenContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterAngularDirectiveStatement(Parser.AngularDirectiveStatementContext ctx) { }
+	@Override public void enterIteration(HtmlParser.IterationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitAngularDirectiveStatement(Parser.AngularDirectiveStatementContext ctx) { }
+	@Override public void exitIteration(HtmlParser.IterationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterHtmlComment(Parser.HtmlCommentContext ctx) { }
+	@Override public void enterDeclarationStatement(HtmlParser.DeclarationStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitHtmlComment(Parser.HtmlCommentContext ctx) { }
+	@Override public void exitDeclarationStatement(HtmlParser.DeclarationStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFormElement(Parser.FormElementContext ctx) { }
+	@Override public void enterIf(HtmlParser.IfContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFormElement(Parser.FormElementContext ctx) { }
+	@Override public void exitIf(HtmlParser.IfContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFormContent(Parser.FormContentContext ctx) { }
+	@Override public void enterReturn(HtmlParser.ReturnContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFormContent(Parser.FormContentContext ctx) { }
+	@Override public void exitReturn(HtmlParser.ReturnContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterInputElement(Parser.InputElementContext ctx) { }
+	@Override public void enterExpre(HtmlParser.ExpreContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitInputElement(Parser.InputElementContext ctx) { }
+	@Override public void exitExpre(HtmlParser.ExpreContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTextareaElement(Parser.TextareaElementContext ctx) { }
+	@Override public void enterExpressions(HtmlParser.ExpressionsContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitTextareaElement(Parser.TextareaElementContext ctx) { }
+	@Override public void exitExpressions(HtmlParser.ExpressionsContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterButtonElement(Parser.ButtonElementContext ctx) { }
+	@Override public void enterArrayCall(HtmlParser.ArrayCallContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitButtonElement(Parser.ButtonElementContext ctx) { }
+	@Override public void exitArrayCall(HtmlParser.ArrayCallContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTableElement(Parser.TableElementContext ctx) { }
+	@Override public void enterDowhile(HtmlParser.DowhileContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitTableElement(Parser.TableElementContext ctx) { }
+	@Override public void exitDowhile(HtmlParser.DowhileContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTableRow(Parser.TableRowContext ctx) { }
+	@Override public void enterForEach(HtmlParser.ForEachContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitTableRow(Parser.TableRowContext ctx) { }
+	@Override public void exitForEach(HtmlParser.ForEachContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTableHeader(Parser.TableHeaderContext ctx) { }
+	@Override public void enterFor(HtmlParser.ForContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitTableHeader(Parser.TableHeaderContext ctx) { }
+	@Override public void exitFor(HtmlParser.ForContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTableCell(Parser.TableCellContext ctx) { }
+	@Override public void enterWhile(HtmlParser.WhileContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitTableCell(Parser.TableCellContext ctx) { }
+	@Override public void exitWhile(HtmlParser.WhileContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterListitem(Parser.ListitemContext ctx) { }
+	@Override public void enterVariable(HtmlParser.VariableContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitListitem(Parser.ListitemContext ctx) { }
+	@Override public void exitVariable(HtmlParser.VariableContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterUnorderedList(Parser.UnorderedListContext ctx) { }
+	@Override public void enterFunction(HtmlParser.FunctionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitUnorderedList(Parser.UnorderedListContext ctx) { }
+	@Override public void exitFunction(HtmlParser.FunctionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterOrderedList(Parser.OrderedListContext ctx) { }
+	@Override public void enterArray(HtmlParser.ArrayContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitOrderedList(Parser.OrderedListContext ctx) { }
+	@Override public void exitArray(HtmlParser.ArrayContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterAnchorTag(Parser.AnchorTagContext ctx) { }
+	@Override public void enterExpressionStatement(HtmlParser.ExpressionStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitAnchorTag(Parser.AnchorTagContext ctx) { }
+	@Override public void exitExpressionStatement(HtmlParser.ExpressionStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterImgTag(Parser.ImgTagContext ctx) { }
+	@Override public void enterClassDeclaration(HtmlParser.ClassDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitImgTag(Parser.ImgTagContext ctx) { }
+	@Override public void exitClassDeclaration(HtmlParser.ClassDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterHeadContent(Parser.HeadContentContext ctx) { }
+	@Override public void enterVariableDeclaration(HtmlParser.VariableDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitHeadContent(Parser.HeadContentContext ctx) { }
+	@Override public void exitVariableDeclaration(HtmlParser.VariableDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterHeadElement(Parser.HeadElementContext ctx) { }
+	@Override public void enterFunctionDeclaration(HtmlParser.FunctionDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitHeadElement(Parser.HeadElementContext ctx) { }
+	@Override public void exitFunctionDeclaration(HtmlParser.FunctionDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTitleTag(Parser.TitleTagContext ctx) { }
+	@Override public void enterParameters(HtmlParser.ParametersContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitTitleTag(Parser.TitleTagContext ctx) { }
+	@Override public void exitParameters(HtmlParser.ParametersContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterBodyContent(Parser.BodyContentContext ctx) { }
+	@Override public void enterIfStatement(HtmlParser.IfStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitBodyContent(Parser.BodyContentContext ctx) { }
+	@Override public void exitIfStatement(HtmlParser.IfStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterBodyElement(Parser.BodyElementContext ctx) { }
+	@Override public void enterForStatement(HtmlParser.ForStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitBodyElement(Parser.BodyElementContext ctx) { }
+	@Override public void exitForStatement(HtmlParser.ForStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterBoldTextElement(Parser.BoldTextElementContext ctx) { }
+	@Override public void enterForEachStatement(HtmlParser.ForEachStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitBoldTextElement(Parser.BoldTextElementContext ctx) { }
+	@Override public void exitForEachStatement(HtmlParser.ForEachStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterItalicTextElement(Parser.ItalicTextElementContext ctx) { }
+	@Override public void enterBlock(HtmlParser.BlockContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitItalicTextElement(Parser.ItalicTextElementContext ctx) { }
+	@Override public void exitBlock(HtmlParser.BlockContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterUnderlineTextElement(Parser.UnderlineTextElementContext ctx) { }
+	@Override public void enterImportStatement(HtmlParser.ImportStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitUnderlineTextElement(Parser.UnderlineTextElementContext ctx) { }
+	@Override public void exitImportStatement(HtmlParser.ImportStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterBreakLineElement(Parser.BreakLineElementContext ctx) { }
+	@Override public void enterInitializationExpression(HtmlParser.InitializationExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitBreakLineElement(Parser.BreakLineElementContext ctx) { }
+	@Override public void exitInitializationExpression(HtmlParser.InitializationExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterSpanElement(Parser.SpanElementContext ctx) { }
+	@Override public void enterIterationExpression(HtmlParser.IterationExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitSpanElement(Parser.SpanElementContext ctx) { }
+	@Override public void exitIterationExpression(HtmlParser.IterationExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTextContent(Parser.TextContentContext ctx) { }
+	@Override public void enterWhileStatement(HtmlParser.WhileStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitTextContent(Parser.TextContentContext ctx) { }
+	@Override public void exitWhileStatement(HtmlParser.WhileStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterH1Element(Parser.H1ElementContext ctx) { }
+	@Override public void enterDoWhileStatement(HtmlParser.DoWhileStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitH1Element(Parser.H1ElementContext ctx) { }
+	@Override public void exitDoWhileStatement(HtmlParser.DoWhileStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterH2Element(Parser.H2ElementContext ctx) { }
+	@Override public void enterStrictEqualityExpression(HtmlParser.StrictEqualityExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitH2Element(Parser.H2ElementContext ctx) { }
+	@Override public void exitStrictEqualityExpression(HtmlParser.StrictEqualityExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterH3Element(Parser.H3ElementContext ctx) { }
+	@Override public void enterReturnStatement(HtmlParser.ReturnStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitH3Element(Parser.H3ElementContext ctx) { }
+	@Override public void exitReturnStatement(HtmlParser.ReturnStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterH4Element(Parser.H4ElementContext ctx) { }
+	@Override public void enterExpression(HtmlParser.ExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitH4Element(Parser.H4ElementContext ctx) { }
+	@Override public void exitExpression(HtmlParser.ExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterH5Element(Parser.H5ElementContext ctx) { }
+	@Override public void enterArrayDeclaration(HtmlParser.ArrayDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitH5Element(Parser.H5ElementContext ctx) { }
+	@Override public void exitArrayDeclaration(HtmlParser.ArrayDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterH6Element(Parser.H6ElementContext ctx) { }
+	@Override public void enterArrayElements(HtmlParser.ArrayElementsContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitH6Element(Parser.H6ElementContext ctx) { }
+	@Override public void exitArrayElements(HtmlParser.ArrayElementsContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterPElement(Parser.PElementContext ctx) { }
+	@Override public void enterArrayMethodCall(HtmlParser.ArrayMethodCallContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitPElement(Parser.PElementContext ctx) { }
+	@Override public void exitArrayMethodCall(HtmlParser.ArrayMethodCallContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

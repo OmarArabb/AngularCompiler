@@ -1,11 +1,11 @@
 package Ast;
 
-public class ArrayMethodCall extends Statement {
+public class ForEachStatement extends IterationStatement {
     private String identifier;
     private String element;
     private Block block;
 
-    public ArrayMethodCall(String identifier, String element, Block block) {
+    public ForEachStatement(String identifier, String element, Block block) {
         this.identifier = identifier;
         this.element = element;
         this.block = block;
@@ -15,7 +15,7 @@ public class ArrayMethodCall extends Statement {
 
     @Override
     public String toString() {
-        return identifier + ".forEach((" + element + ") => " + block.toString() + ");";
+        return identifier + ".forEach((" + element + ") => " + block.toString() + ")";
     }
 }
 

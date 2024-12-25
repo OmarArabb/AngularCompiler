@@ -1,7 +1,5 @@
 parser grammar Parser;
 
-import HtmlParser;
-
 options {
   tokenVocab=Lexer;
 }

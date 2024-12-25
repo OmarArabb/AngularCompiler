@@ -1,4 +1,5 @@
-// Generated from C:/Users/Omar Arab/IdeaProjects/compilertest/src/HtmlParser.g4 by ANTLR 4.13.2
+// Generated from C:/Users/n_alb/IdeaProjects/AngularCompiler/src/grammer/HtmlParser.g4 by ANTLR 4.13.2
+package gen;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -387,65 +388,65 @@ public interface HtmlParserListener extends ParseTreeListener {
 	 */
 	void exitProgram(HtmlParser.ProgramContext ctx);
 	/**
+	 * Enter a parse tree produced by the {@code importState}
+	 * labeled alternative in {@link HtmlParser#line}.
+	 * @param ctx the parse tree
+	 */
+	void enterImportState(HtmlParser.ImportStateContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code importState}
+	 * labeled alternative in {@link HtmlParser#line}.
+	 * @param ctx the parse tree
+	 */
+	void exitImportState(HtmlParser.ImportStateContext ctx);
+	/**
 	 * Enter a parse tree produced by the {@code class}
-	 * labeled alternative in {@link HtmlParser#statement}.
+	 * labeled alternative in {@link HtmlParser#line}.
 	 * @param ctx the parse tree
 	 */
 	void enterClass(HtmlParser.ClassContext ctx);
 	/**
 	 * Exit a parse tree produced by the {@code class}
-	 * labeled alternative in {@link HtmlParser#statement}.
+	 * labeled alternative in {@link HtmlParser#line}.
 	 * @param ctx the parse tree
 	 */
 	void exitClass(HtmlParser.ClassContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code dowhile}
-	 * labeled alternative in {@link HtmlParser#statement}.
+	 * Enter a parse tree produced by the {@code statemen}
+	 * labeled alternative in {@link HtmlParser#line}.
 	 * @param ctx the parse tree
 	 */
-	void enterDowhile(HtmlParser.DowhileContext ctx);
+	void enterStatemen(HtmlParser.StatemenContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code dowhile}
-	 * labeled alternative in {@link HtmlParser#statement}.
+	 * Exit a parse tree produced by the {@code statemen}
+	 * labeled alternative in {@link HtmlParser#line}.
 	 * @param ctx the parse tree
 	 */
-	void exitDowhile(HtmlParser.DowhileContext ctx);
+	void exitStatemen(HtmlParser.StatemenContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code for}
+	 * Enter a parse tree produced by the {@code iteration}
 	 * labeled alternative in {@link HtmlParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void enterFor(HtmlParser.ForContext ctx);
+	void enterIteration(HtmlParser.IterationContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code for}
+	 * Exit a parse tree produced by the {@code iteration}
 	 * labeled alternative in {@link HtmlParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void exitFor(HtmlParser.ForContext ctx);
+	void exitIteration(HtmlParser.IterationContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code variable}
+	 * Enter a parse tree produced by the {@code declarationStatement}
 	 * labeled alternative in {@link HtmlParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void enterVariable(HtmlParser.VariableContext ctx);
+	void enterDeclarationStatement(HtmlParser.DeclarationStatementContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code variable}
+	 * Exit a parse tree produced by the {@code declarationStatement}
 	 * labeled alternative in {@link HtmlParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void exitVariable(HtmlParser.VariableContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code function}
-	 * labeled alternative in {@link HtmlParser#statement}.
-	 * @param ctx the parse tree
-	 */
-	void enterFunction(HtmlParser.FunctionContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code function}
-	 * labeled alternative in {@link HtmlParser#statement}.
-	 * @param ctx the parse tree
-	 */
-	void exitFunction(HtmlParser.FunctionContext ctx);
+	void exitDeclarationStatement(HtmlParser.DeclarationStatementContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code if}
 	 * labeled alternative in {@link HtmlParser#statement}.
@@ -459,18 +460,6 @@ public interface HtmlParserListener extends ParseTreeListener {
 	 */
 	void exitIf(HtmlParser.IfContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code while}
-	 * labeled alternative in {@link HtmlParser#statement}.
-	 * @param ctx the parse tree
-	 */
-	void enterWhile(HtmlParser.WhileContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code while}
-	 * labeled alternative in {@link HtmlParser#statement}.
-	 * @param ctx the parse tree
-	 */
-	void exitWhile(HtmlParser.WhileContext ctx);
-	/**
 	 * Enter a parse tree produced by the {@code return}
 	 * labeled alternative in {@link HtmlParser#statement}.
 	 * @param ctx the parse tree
@@ -483,17 +472,29 @@ public interface HtmlParserListener extends ParseTreeListener {
 	 */
 	void exitReturn(HtmlParser.ReturnContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code array}
+	 * Enter a parse tree produced by the {@code expre}
 	 * labeled alternative in {@link HtmlParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void enterArray(HtmlParser.ArrayContext ctx);
+	void enterExpre(HtmlParser.ExpreContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code array}
+	 * Exit a parse tree produced by the {@code expre}
 	 * labeled alternative in {@link HtmlParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void exitArray(HtmlParser.ArrayContext ctx);
+	void exitExpre(HtmlParser.ExpreContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code expressions}
+	 * labeled alternative in {@link HtmlParser#statement}.
+	 * @param ctx the parse tree
+	 */
+	void enterExpressions(HtmlParser.ExpressionsContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code expressions}
+	 * labeled alternative in {@link HtmlParser#statement}.
+	 * @param ctx the parse tree
+	 */
+	void exitExpressions(HtmlParser.ExpressionsContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code arrayCall}
 	 * labeled alternative in {@link HtmlParser#statement}.
@@ -507,6 +508,90 @@ public interface HtmlParserListener extends ParseTreeListener {
 	 */
 	void exitArrayCall(HtmlParser.ArrayCallContext ctx);
 	/**
+	 * Enter a parse tree produced by the {@code dowhile}
+	 * labeled alternative in {@link HtmlParser#iterationStatement}.
+	 * @param ctx the parse tree
+	 */
+	void enterDowhile(HtmlParser.DowhileContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code dowhile}
+	 * labeled alternative in {@link HtmlParser#iterationStatement}.
+	 * @param ctx the parse tree
+	 */
+	void exitDowhile(HtmlParser.DowhileContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code forEach}
+	 * labeled alternative in {@link HtmlParser#iterationStatement}.
+	 * @param ctx the parse tree
+	 */
+	void enterForEach(HtmlParser.ForEachContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code forEach}
+	 * labeled alternative in {@link HtmlParser#iterationStatement}.
+	 * @param ctx the parse tree
+	 */
+	void exitForEach(HtmlParser.ForEachContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code for}
+	 * labeled alternative in {@link HtmlParser#iterationStatement}.
+	 * @param ctx the parse tree
+	 */
+	void enterFor(HtmlParser.ForContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code for}
+	 * labeled alternative in {@link HtmlParser#iterationStatement}.
+	 * @param ctx the parse tree
+	 */
+	void exitFor(HtmlParser.ForContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code while}
+	 * labeled alternative in {@link HtmlParser#iterationStatement}.
+	 * @param ctx the parse tree
+	 */
+	void enterWhile(HtmlParser.WhileContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code while}
+	 * labeled alternative in {@link HtmlParser#iterationStatement}.
+	 * @param ctx the parse tree
+	 */
+	void exitWhile(HtmlParser.WhileContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code variable}
+	 * labeled alternative in {@link HtmlParser#declaration}.
+	 * @param ctx the parse tree
+	 */
+	void enterVariable(HtmlParser.VariableContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code variable}
+	 * labeled alternative in {@link HtmlParser#declaration}.
+	 * @param ctx the parse tree
+	 */
+	void exitVariable(HtmlParser.VariableContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code function}
+	 * labeled alternative in {@link HtmlParser#declaration}.
+	 * @param ctx the parse tree
+	 */
+	void enterFunction(HtmlParser.FunctionContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code function}
+	 * labeled alternative in {@link HtmlParser#declaration}.
+	 * @param ctx the parse tree
+	 */
+	void exitFunction(HtmlParser.FunctionContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code array}
+	 * labeled alternative in {@link HtmlParser#declaration}.
+	 * @param ctx the parse tree
+	 */
+	void enterArray(HtmlParser.ArrayContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code array}
+	 * labeled alternative in {@link HtmlParser#declaration}.
+	 * @param ctx the parse tree
+	 */
+	void exitArray(HtmlParser.ArrayContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link HtmlParser#expressionStatement}.
 	 * @param ctx the parse tree
 	 */
@@ -516,6 +601,16 @@ public interface HtmlParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitExpressionStatement(HtmlParser.ExpressionStatementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link HtmlParser#classDeclaration}.
+	 * @param ctx the parse tree
+	 */
+	void enterClassDeclaration(HtmlParser.ClassDeclarationContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link HtmlParser#classDeclaration}.
+	 * @param ctx the parse tree
+	 */
+	void exitClassDeclaration(HtmlParser.ClassDeclarationContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link HtmlParser#variableDeclaration}.
 	 * @param ctx the parse tree
@@ -577,6 +672,26 @@ public interface HtmlParserListener extends ParseTreeListener {
 	 */
 	void exitForEachStatement(HtmlParser.ForEachStatementContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link HtmlParser#block}.
+	 * @param ctx the parse tree
+	 */
+	void enterBlock(HtmlParser.BlockContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link HtmlParser#block}.
+	 * @param ctx the parse tree
+	 */
+	void exitBlock(HtmlParser.BlockContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link HtmlParser#importStatement}.
+	 * @param ctx the parse tree
+	 */
+	void enterImportStatement(HtmlParser.ImportStatementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link HtmlParser#importStatement}.
+	 * @param ctx the parse tree
+	 */
+	void exitImportStatement(HtmlParser.ImportStatementContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link HtmlParser#initializationExpression}.
 	 * @param ctx the parse tree
 	 */
@@ -586,16 +701,6 @@ public interface HtmlParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitInitializationExpression(HtmlParser.InitializationExpressionContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link HtmlParser#conditionExpression}.
-	 * @param ctx the parse tree
-	 */
-	void enterConditionExpression(HtmlParser.ConditionExpressionContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link HtmlParser#conditionExpression}.
-	 * @param ctx the parse tree
-	 */
-	void exitConditionExpression(HtmlParser.ConditionExpressionContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link HtmlParser#iterationExpression}.
 	 * @param ctx the parse tree
@@ -686,38 +791,4 @@ public interface HtmlParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitArrayMethodCall(HtmlParser.ArrayMethodCallContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link HtmlParser#classDeclaration}.
-	 * @param ctx the parse tree
-	 */
-	void enterClassDeclaration(HtmlParser.ClassDeclarationContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link HtmlParser#classDeclaration}.
-	 * @param ctx the parse tree
-	 */
-	void exitClassDeclaration(HtmlParser.ClassDeclarationContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code functionDeclaratin}
-	 * labeled alternative in {@link HtmlParser#classBody}.
-	 * @param ctx the parse tree
-	 */
-	void enterFunctionDeclaratin(HtmlParser.FunctionDeclaratinContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code functionDeclaratin}
-	 * labeled alternative in {@link HtmlParser#classBody}.
-	 * @param ctx the parse tree
-	 */
-	void exitFunctionDeclaratin(HtmlParser.FunctionDeclaratinContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code variableDeclartion}
-	 * labeled alternative in {@link HtmlParser#classBody}.
-	 * @param ctx the parse tree
-	 */
-	void enterVariableDeclartion(HtmlParser.VariableDeclartionContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code variableDeclartion}
-	 * labeled alternative in {@link HtmlParser#classBody}.
-	 * @param ctx the parse tree
-	 */
-	void exitVariableDeclartion(HtmlParser.VariableDeclartionContext ctx);
 }

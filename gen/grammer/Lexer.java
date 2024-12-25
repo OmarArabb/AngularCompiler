@@ -1,4 +1,5 @@
-// Generated from C:/Users/Omar Arab/IdeaProjects/compilertest/src/Lexer.g4 by ANTLR 4.13.2
+// Generated from C:/Users/n_alb/IdeaProjects/AngularCompiler/src/grammer/Lexer.g4 by ANTLR 4.13.2
+package grammer;
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
@@ -109,7 +110,7 @@ public class Lexer extends Lexer {
 	}
 
 	@Override
-	public String getGrammarFileName() { return "grammer/Lexer.g4"; }
+	public String getGrammarFileName() { return "Lexer.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
