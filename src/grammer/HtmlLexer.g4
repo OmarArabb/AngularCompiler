@@ -1,6 +1,6 @@
 lexer grammar HtmlLexer;
 
-import Lexer;
+import TypeLexer;
 
 DOCTYPE: '<!DOCTYPE' [ \t\r\n]* 'html' '>';
 

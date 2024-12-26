@@ -1,7 +1,7 @@
-parser grammar Parser;
+parser grammar TypeParser;
 
 options {
-  tokenVocab=Lexer;
+  tokenVocab=TypeLexer;
 }
 
 program : line+;
