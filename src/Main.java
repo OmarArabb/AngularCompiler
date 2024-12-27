@@ -17,16 +17,11 @@ public class Main {
 
         String source = "test/test1.txt";
         CharStream cs = fromFileName(source);
-        System.out.println(cs);
         TypeLexer typeLexer = new TypeLexer(cs);
-        System.out.println(typeLexer);
         CommonTokenStream commonTokenStream = new CommonTokenStream(typeLexer);
-        System.out.println(commonTokenStream);
         TypeParser typeParser = new TypeParser(commonTokenStream);
-        System.out.println(typeParser);
         ParseTree tree = typeParser.program();
-        System.out.println(tree);
-        Program program = (Program) new TypeParserBaseVisitor<>().visit(tree);
+        Program program = (Program) new ProgramVisitor().visit(tree);
         System.out.println(program);
     }
 }
