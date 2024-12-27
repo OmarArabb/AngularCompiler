@@ -1,5 +1,7 @@
 package Ast;
 
+import Ast.Expression.Expression;
+
 public class VariableDeclaration extends Declaration {
     private boolean isExported;
     private String variableType;

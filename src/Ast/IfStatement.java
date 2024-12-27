@@ -1,5 +1,9 @@
 package Ast;
 
+import Ast.Expression.Expression;
+
+import java.util.List;
+
 public class IfStatement extends Statement {
     private Expression condition;
     private Block block;
@@ -19,7 +23,7 @@ public class IfStatement extends Statement {
     public String toString() {
         String result = "if (" + condition.toString() + ") " + block.toString();
         for (IfStatement elseIf : elseIfStatements) {
-            result += " else if (" + elseIf.getCondition().toString() + ") " + elseIf.getBlock().toString();
+            result += " else if (" + elseIf.condition.toString() + ") " + elseIf.block.toString();
         }
         if (elseBlock != null) {
             result += " else " + elseBlock.toString();

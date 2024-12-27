@@ -1,0 +1,10 @@
+import * from a;
+
+export class abc{
+let a : number = 0;
+
+
+function a(b:number,):any{
+return 10;
+}
+}

@@ -1,5 +1,7 @@
 package Ast;
 
+import Ast.Expression.Expression;
+
 public class ReturnExpression extends Statement {
     private Expression expression;
 

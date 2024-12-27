@@ -1,5 +1,7 @@
 package Ast;
 
+import Ast.Expression.Expression;
+
 public class DoWhileStatement extends IterationStatement {
     private Block block;
     private Expression condition;

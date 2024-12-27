@@ -1,5 +1,7 @@
 package Ast;
 
+import Ast.Expression.Expression;
+
 public class WhileStatement extends IterationStatement {
     private Expression condition;
     private Block block;

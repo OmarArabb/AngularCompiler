@@ -1,5 +1,7 @@
 package Ast;
 
+import Ast.Expression.Expression;
+
 public class ForStatement extends IterationStatement {
     private InitializationExpression initialization;
     private Expression condition;

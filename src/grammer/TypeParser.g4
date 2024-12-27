@@ -9,7 +9,7 @@ program : line+;
 line :
       importStatement         #importState
     | classDeclaration        #class
-    | statement               #statemen
+    | statement               #statementt
 ;
 
 
@@ -18,8 +18,8 @@ statement:
   | declaration             #declarationStatement
   | ifStatement             #if
   | returnStatement         #return
-  | expression              #expre
-  | expressionStatement     #expressions
+  | expression              #express
+  | expressionStatement     #expressionState
   | arrayMethodCall         #arrayCall
 ;
 
@@ -71,9 +71,9 @@ variableDeclaration
 functionDeclaration
   : FUNCTION IDENTIFIER LPAREN parameters RPAREN COLON TYPE block
   ;
-  parameters
-    : (IDENTIFIER COLON TYPE (COMMA IDENTIFIER COLON TYPE)* COMMA?)?
-    ;
+  parameters : (parameter (COMMA parameter)* COMMA?)? ;
+
+  parameter : IDENTIFIER COLON TYPE ;
 
   ifStatement
     : IF LPAREN expression RPAREN block
@@ -94,7 +94,7 @@ block :
     LBRACE statement* RBRACE
 ;
 
-importStatement : IMPORT ( LBRACE IDENTIFIER (COMMA IDENTIFIER)* COMMA? RBRACE | '*') FROM  IDENTIFIER SEMICOLON;
+importStatement : IMPORT ( LBRACE IDENTIFIER (COMMA IDENTIFIER)* COMMA? RBRACE | TIMES) FROM  IDENTIFIER SEMICOLON;
 
   initializationExpression
     : VARIABLE_TYPE IDENTIFIER EQUAL expression
@@ -102,7 +102,7 @@ importStatement : IMPORT ( LBRACE IDENTIFIER (COMMA IDENTIFIER)* COMMA? RBRACE |
     ;
 
   iterationExpression
-    : IDENTIFIER (INCREMENT | DECREMENT | (PLUS EQUAL NUMBER | MINUS EQUAL NUMBER | MUL_ASSIGN NUMBER | DIV_ASSIGN NUMBER | MOD_ASSIGN NUMBER))
+    : IDENTIFIER (INCREMENT | DECREMENT | (PLUS_EQUAL NUMBER | MINUS_EQUAL NUMBER | MUL_ASSIGN NUMBER | DIV_ASSIGN NUMBER | MOD_ASSIGN NUMBER))
     ;
 
   whileStatement
@@ -150,8 +150,8 @@ importStatement : IMPORT ( LBRACE IDENTIFIER (COMMA IDENTIFIER)* COMMA? RBRACE |
       | IDENTIFIER MUL_ASSIGN expression  // *=
       | IDENTIFIER MOD_ASSIGN expression  // %=
       | IDENTIFIER EQUAL expression  // =
-      | IDENTIFIER PLUS EQUAL expression  // +=
-      | IDENTIFIER MINUS EQUAL expression  // -=
+      | IDENTIFIER PLUS_EQUAL expression  // +=
+      | IDENTIFIER MINUS_EQUAL expression  // -=
       | IDENTIFIER DIV_ASSIGN expression  // /=
       | IDENTIFIER MOD_ASSIGN expression  // %=
       | IDENTIFIER PLUS expression     // Allowed for simple addition
@@ -165,7 +165,7 @@ importStatement : IMPORT ( LBRACE IDENTIFIER (COMMA IDENTIFIER)* COMMA? RBRACE |
       ;
 
     arrayDeclaration
-      : VARIABLE_TYPE IDENTIFIER LBRACKET RBRACKET COLON TYPE  EQUAL LBRACKET arrayElements? RBRACKET SEMICOLON
+      : IDENTIFIER LBRACKET RBRACKET COLON TYPE  EQUAL LBRACKET arrayElements? RBRACKET SEMICOLON
       ;
 
     arrayElements

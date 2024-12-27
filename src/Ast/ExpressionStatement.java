@@ -1,10 +1,18 @@
 package Ast;
 
 public class ExpressionStatement extends Statement {
-    // Add relevant fields and methods
+    private final String expression;
+
+    public ExpressionStatement(String expression) {
+        this.expression = expression;
+    } // Getter
+
+    public String getExpression() {
+        return expression;
+    }
 
     @Override
     public String toString() {
-        return "ExpressionStatement";
+        return "ExpressionStatement: " + expression + ";";
     }
 }

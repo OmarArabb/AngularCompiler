@@ -31,6 +31,8 @@ LESS: '<';
 LESS_EQUAL: '<=';
 INCREMENT: '++';
 DECREMENT: '--';
+PLUS_EQUAL : '+=';
+MINUS_EQUAL : '-=';
 MUL_ASSIGN: '*=';
 DIV_ASSIGN: '/=';
 MOD_ASSIGN: '%=';

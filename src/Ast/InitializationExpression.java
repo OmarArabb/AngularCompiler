@@ -1,5 +1,7 @@
 package Ast;
 
+import Ast.Expression.Expression;
+
 public class InitializationExpression extends Statement {
     private String variableType;
     private String identifier;
