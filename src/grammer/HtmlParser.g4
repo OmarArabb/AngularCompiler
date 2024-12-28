@@ -1,6 +1,7 @@
 parser grammar HtmlParser;
 
 import TypeParser;
+
 options {
   tokenVocab=HtmlLexer;
 }
