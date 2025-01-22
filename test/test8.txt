@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+  <html lang="ar">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>صفحة HTML بسيطة</title>
+      <style>
+          body {
+              font-family: Arial, sans-serif;
+              direction: rtl;
+              background-color: #f9f9f9;
+              margin: 0;
+              padding: 20px;
+          }
+          header {
+              background-color: #007bff;
+              color: white;
+              padding: 15px;
+              text-align: center;
+          }
+          main {
+              margin: 20px 0;
+          }
+          footer {
+              text-align: center;
+              color: #555;
+              padding: 10px 0;
+              border-top: 1px solid #ddd;
+          }
+      </style>
+  </head>
+  <body>
+      <header>
+          <h1>مرحبًا بك في موقعي</h1>
+      </header>
+
+      <main>
+          <h2>عن الموقع</h2>
+          <p>هذه صفحة HTML بسيطة تحتوي على رأس، محتوى، وتذييل.</p>
+          <p>يمكنك تعديل هذا النص أو إضافة المزيد من العناصر حسب احتياجاتك.</p>
+      </main>
+
+  </body>
+  </html>

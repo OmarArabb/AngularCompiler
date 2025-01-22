@@ -1,0 +1,7 @@
+<div *ngIf="selectedProduct" class="product-details">
+  <img [src]="selectedProduct.image" alt="{{ selectedProduct.name }}" class="product-image" />
+  <h3>{{ selectedProduct.name }}</h3>
+  <div [innerHTML]="selectedProduct.details"></div>
+</div><div *ngIf="!selectedProduct">
+  <p>Please select a product to see the details.</p>
+</div>

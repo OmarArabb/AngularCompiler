@@ -1,0 +1,36 @@
+import { Component, Input } from '@angular/core';
+import * from '@angular/common';
+
+@Component({
+  selector: 'app-product-details',
+  standalone: 'true',
+  imports: [CommonModule],
+  templateUrl: './product-details.component.html',
+  styleUrl: './product-details.component.css',
+})
+export class ProductDetailsComponent
+{
+
+  private s : number[] = [1,2,2,3];
+
+  @Input() selectedProduct: any;
+}
+
+class d {
+public q;
+protected w;
+}
+
+let a ;
+var b = 9;
+a = new d(p,"rr",);
+
+a.map(1,(q : number,d : string) : boolean=>{
+let q : number = 9;
+if(q == 9){
+}else if(r <= 9){
+}
+function a(){}
+},);
+
+s : any[] = [1,2,3];

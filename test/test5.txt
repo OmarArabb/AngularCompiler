@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>صفحة HTML بسيطة</title>
+      <style></style>
+  </head>
+  <body>
+      <header>
+          <h1>مرحبا بك في موقعي</h1>
+      </header>
+
+      <main>
+          <h2>عن الموقع</h2>
+          <p>هذه صفحة HTML بسيطة تحتوي على راس محتوى وتذييل.</p>
+          <p>يمكنك تعديل هذا النص و ضافة المزيد من العناصر حسب احتياجاتك.</p>
+      </main>
+  </body>
+  </html>

@@ -1,0 +1,7 @@
+<ul>
+    <li *ngFor="let product of products" (click)="selectProduct(product)">
+      <img [src]="product.image" alt="{{ product.name }}" class="product-image" />
+      <h3>{{ product.name }}
+      </h3>
+    </li>
+  </ul>
